@@ -1,9 +1,8 @@
 
 import processing.core.*;
 
-public class Sketch extends PApplet {
+public class Sketch1 extends PApplet {
 
- 
     @Override
     public void settings() {
         size(512, 512);
@@ -11,7 +10,7 @@ public class Sketch extends PApplet {
 
     @Override
     public void setup() {
-         background(0);
+         background(150);
 
     }
 
