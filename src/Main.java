@@ -10,8 +10,8 @@ public class Main {
         PApplet a = new PApplet();      
         PApplet b = new PApplet();
         
-        a.main(new String[]{"Sketch"});
-        b.main(new String[]{"Sketch1"});
+        a.main(new String[]{"Window1"});
+        b.main(new String[]{"Window2"});
        
     }
 }
