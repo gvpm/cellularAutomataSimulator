@@ -1,22 +1,15 @@
+import java.util.ArrayList;
 import processing.core.*;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author gvpm
- */
 public class SquareGrid {
     
-    float width, height;
+    float totalWidth, totalHeight;
     int rows,columns;
     float cellSize;
     int nCells;        
     PApplet p ;
+    ArrayList<SquareCell8> Cells;
 
     public SquareGrid(PApplet p) {
         this.p = p;
@@ -30,21 +23,35 @@ public class SquareGrid {
         this.columns = columns;
         this.cellSize = cellSize;
         
-        height = rows*cellSize;
-        width = columns*cellSize;
+        totalHeight = rows*cellSize;
+        totalWidth = columns*cellSize;
         nCells = rows*columns;
+        
+        Cells = new ArrayList<SquareCell8>();
+        
+        System.out.println(totalWidth +" " + totalHeight +" " +nCells);
+    }
+    
+    public void init(){
+        
+        for (int i = 0; i < nCells; i++) {
+            Cells.add(new SquareCell8(i,false));
+            
+        }
     }
     
     public void update(){
         
         
     }
-    
+     
     public void draw(){
         p.stroke(0);
         p.fill(150);
-        for (int i = 0; i < width; i++) {
-            for (int j = 0; j < height; j++) {
+        //p.size((int)totalWidth,(int)totalHeight);
+     
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
                 p.rect(cellSize*i, cellSize*j, cellSize, cellSize);
             }
             

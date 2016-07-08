@@ -16,6 +16,8 @@ public abstract class Cell {
     State nextState;
     ArrayList<State> stateHistory;
     
+    boolean hasNewState;
+    
     
     //The cell with the rule type will only have the states of the neighbours
     boolean rule;
@@ -23,9 +25,25 @@ public abstract class Cell {
     public Cell(int id, boolean rule) {
         this.id = id;
         this.rule=rule;
+        hasNewState = false;
     }
     
     //--------Getters and Setters
+    
+    public void flagNewState(){
+        hasNewState = true;
+        
+    }
+    public void unFlagNewState(){
+        hasNewState = false;
+        
+    }
+    
+
+    public boolean hasNewState() {
+        return hasNewState;
+    }
+    
     
     public int getType() {
         return type;
@@ -65,6 +83,19 @@ public abstract class Cell {
     
     public boolean isRuleCell(){
         return rule;
+        
+    }
+    //change this to put history
+    
+    //will update the cell, unflags the changes, current becomes new, new becomes null
+    public void updateCell(){
+        if(hasNewState()){
+            unFlagNewState();
+            currentState = nextState;
+            nextState = null;
+            
+            
+        }
         
     }
     

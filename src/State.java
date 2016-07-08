@@ -16,6 +16,8 @@ public abstract class State {
     public State() {
         
     }
+    
+   
 
     public int getType() {
         return type;
@@ -24,6 +26,8 @@ public abstract class State {
     
     
     public abstract boolean compare (State s);
+    
+    public abstract void copy (State s);
     
     
     

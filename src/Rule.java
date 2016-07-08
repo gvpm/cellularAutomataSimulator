@@ -38,7 +38,8 @@ public class Rule {
             
         }
     }
-    
+    //checks if the rulle is applicable and if it is, changes the next state of the cell
+    // and flags the change
     public boolean applyRule(Cell c){
         if(c.compare(ruleCell)){
             State next = newState;
