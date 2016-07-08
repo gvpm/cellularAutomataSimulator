@@ -15,7 +15,7 @@ public class BinaryState extends State {
         stateValue = 0;
         
     }
-    
+
     
     
     
@@ -43,6 +43,11 @@ public class BinaryState extends State {
 
     public void setState(int state) {
         this.stateValue = state;
+    }
+
+    @Override
+    public void copy(State s) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
