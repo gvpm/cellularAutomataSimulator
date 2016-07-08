@@ -3,10 +3,7 @@ import java.util.ArrayList;
 
 
 
-/**
- *
- * @author gvpm
- */
+
 public abstract class Cell {
     
     int type;
@@ -17,7 +14,6 @@ public abstract class Cell {
     ArrayList<State> stateHistory;
     
     boolean hasNewState;
-    
     
     //The cell with the rule type will only have the states of the neighbours
     boolean rule;

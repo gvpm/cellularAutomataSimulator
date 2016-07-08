@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import processing.core.*;
 
-
+//Specific type of grid
 public class SquareGrid {
     
     float totalWidth, totalHeight;

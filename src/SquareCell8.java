@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+//represents a square cell with 8 neighbours, will probably go into a factory
 
 public class SquareCell8 extends Cell {
     
